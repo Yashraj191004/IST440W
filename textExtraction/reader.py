@@ -42,4 +42,4 @@ def main():
     loop_car_bank("manuals.csv")
 
 if __name__ == "__main__":
-    main()
+    main() 

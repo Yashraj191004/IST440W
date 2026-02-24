@@ -86,7 +86,7 @@ def update_database_with_oil_info(db_path):
     query = """
         SELECT m.id, m.local_path, mk.make_name, m.model_name, m.year 
         FROM models m
-        JOIN makes mk ON m.make_id = mk.id
+        JOIN makes mk ON m.make_id = mk.make_id
         WHERE m.local_path IS NOT NULL
     """
     cursor.execute(query)

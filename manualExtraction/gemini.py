@@ -26,7 +26,6 @@ def download_car_manual(url: str, filename: str):
         response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
 
-        # Validate PDF
         content_type = response.headers.get("Content-Type", "")
         if "pdf" not in content_type.lower():
             print("[!] URL did not return a PDF.")
