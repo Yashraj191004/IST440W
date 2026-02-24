@@ -1,0 +1,44 @@
+Approach:
+
+1. Get a list of car make, model, year:
+-do this with the help of the nthsa gov api.
+2. Get the pdf of the specific car:
+-3 way approach
+ - get the manual directly from the company website
+   - web scraper for top 15 companies.
+ - get the manual from a google search 
+ - Use llm api to get a random guess
+
+
+limitations:
+1. currently only includes - 
+Sedans (e.g., Honda Civic, Toyota Camry)
+Coupes/Convertibles
+Station Wagons
+Hatchbacks
+
+car db missing SUVs, trucks - https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/multipurpose%20passenger%20vehicle%20(mpv)?format=json, 
+https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/truck?format=json
+
+2.Agentic webscraping 
+Use Skyvern if: You need to complete a workflow (filling forms, navigating multi-page checkouts, or handling complex interactions across different sites).
+
+Use AgentQL if: You need to extract structured data from messy or frequently changing pages and want a reliable way to pick elements without using brittle XPaths.
+
+
+-----make manual links
+Brand,Official Manual Portal URL
+Toyota,https://www.toyota.com/owners/warranty-owners-manuals/
+Honda,https://owners.honda.com/vehicle-information/manuals
+Ford,https://www.ford.com/support/owner-manuals/
+Chevrolet,https://www.chevrolet.com/support/vehicle/manuals-guides
+Tesla,https://www.tesla.com/ownersmanual
+BMW,https://www.bmwusa.com/owners-manuals.html
+Subaru,https://www.subaru.com/owners/vehicle-resources.html
+Nissan,https://www.nissanusa.com/owners/manuals-guides.html
+
+
+prompt = (
+            f"Give me the owners manuals of {car} in pdf format"
+            f"Return ONLY the direct PDF URL. No explanation."
+        )

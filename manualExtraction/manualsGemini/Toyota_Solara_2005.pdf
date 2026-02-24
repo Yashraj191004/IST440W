@@ -1,0 +1,701 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#25374a"><link rel="icon" href="https://static.startmycar.com/images/icons/favicon.ico?v=4e91a5"><link rel="apple-touch-icon" href="https://static.startmycar.com/images/icons/favicon-128.png?v=d19d18"><link rel="alternate" hreflang="x-default" href="https://www.startmycar.com/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en" href="https://www.startmycar.com/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en-au" href="https://www.startmycar.com/au/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en-ca" href="https://www.startmycar.com/ca/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en-gb" href="https://www.startmycar.com/gb/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en-nz" href="https://www.startmycar.com/nz/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en-us" href="https://www.startmycar.com/us/toyota/solara/info/manuals/2005"><link rel="alternate" hreflang="en-za" href="https://www.startmycar.com/za/toyota/solara/info/manuals/2005"><link rel="stylesheet" href="https://static.startmycar.com/stylesheets/new/bundleCore.css?v=9a9ee2"><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="//ajax.googleapis.com"><link rel="dns-prefetch" href="//ajax.googleapis.com"><link rel="preconnect" href="//static.opinautos.com"><link rel="dns-prefetch" href="//static.opinautos.com"><link rel="preconnect" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="preconnect" href="//images.opinautos.com"><link rel="dns-prefetch" href="//images.opinautos.com"><script type="text/javascript">window.config = {"adsenseEnabled":true,"alephTrackingEnabled":true,"alephEndpoint":{"protocol":"https","host":"tracking.rewise.ai","serverClientKey":"89356knk5689j650"},"googleAnalyticsEnabled":true,"googleAnalyticsGA4Id":"G-NYESPTS621","googleAnalyticsAccount":"UA-64038118-1","opinautosUrl":"https://www.startmycar.com","s3ManualImagesBucket":"startmycar-manuals","locale":"en","oauthFacebookClientId":"685129631633019","s3ImageBucket":"rewise-images","s3LegacyImageBucket":"startmycar-images","s3FuseboxImageBucket":"startmycar-images","s3ManualBucket":"startmycar-manuals","botFilterFieldJS":"71*67*17","integridadparahumanos":"80869"};
+window.userState = {"userTrim":{}};
+window.countryCode = "global";
+
+function initializeGlobalTracking(userId, userName, userLevel, casualUserId, fechaCreacion, fechaRegistracion, abtests, serverPageViewId, countryCode, userTrim) {
+  window.pageLoadStartTime = new Date().getTime();
+
+  window.globalPageCounter = new Date().valueOf();
+  try {
+    // Will not work in Opera Mini or IE < 8
+    globalPageCounter = 1 + parseInt(localStorage.getItem("globalPageCounter") || "0");
+    localStorage.setItem("globalPageCounter", globalPageCounter);
+    console.log('Geoloc from ip: <US>');
+  } catch (err) {
+  }
+
+  window.pageViewId = serverPageViewId + "_" + globalPageCounter;
+
+  var alephEndpoint = config.alephEndpoint.protocol + "://" + config.alephEndpoint.host;
+  if (config.alephEndpoint.port)
+    alephEndpoint += ":" + config.alephEndpoint.port;
+
+  var noOpFunc = function () {
+  };
+
+  window.Aleph = window.Aleph || {};
+  window.Aleph.serverUrl = alephEndpoint;
+  window.Aleph.trackingEnabled = (config.alephTrackingEnabled || false) && true;
+  window.Aleph.ClientTracker = window.Aleph.ClientTracker || { trackUserEvent: noOpFunc };
+  window.Aleph.UserInfo = window.Aleph.UserInfo || { trackUserInfoAndTimeOnPage: noOpFunc };
+  window.Aleph.currentUser = {
+    id: userId,
+    casualUserId: casualUserId || undefined,
+    username: userName || undefined,
+    fechaCreacion: fechaCreacion || undefined,
+    fechaRegistracion: fechaRegistracion || undefined,
+    level: userLevel,
+    abtests: abtests,
+    country: countryCode
+  };
+
+  if (userTrim) {
+    window.Aleph.currentUser.userTrim = userTrim;
+  }
+
+  if (window.console) {
+    console.log("CARGANDO PAGEVIEW", pageViewId, Aleph.currentUser);
+  }
+}
+
+window.trackGAEvent = function(namespace, action, label, value, doNotAffectBounce) {
+  if (window._gaq) {
+    // ALl events send the last param 'opt_noninteraction' as true so that it doesn't affect bounce rate
+    _gaq.push(['_trackEvent', namespace, action, label, value, true]);
+
+    if (window.gtag) {
+      window.gtag('event', action, {
+        event_category: namespace,
+        event_label: label,
+        value: value,
+        'non_interaction': !!doNotAffectBounce
+      });
+    }
+  } else {
+    console.log(`%cGA TRACKING %c${JSON.stringify([namespace, action, label, value])}`, 'font-size:16px;color: #0AA;', 'font-size: 12px;color: gray;')
+  }
+}
+
+function setSessionVariable(name, value) {
+  try {
+    if (!sessionStorage.getItem(name)) {
+      sessionStorage.setItem(name, value);
+    }
+  } catch (e) {
+    console.warn(`There was a problem saving session var ` + name, e);
+  }
+}
+
+initializeGlobalTracking('casual-da8255e7-a7dc-41f3-a7b1-a4c4e7497795',
+  '',
+  'casual',
+  '',
+  1771886942220,
+  null,
+  {"testComunidadFooter":"control","testAllSurveyOff":"control"},
+  '75508',
+  'US',
+  window.userState.userTrim || null);
+
+setSessionVariable('sessionStart', new Date().getTime());
+</script><script type="text/javascript">window.pageModelo = {"marca":"Toyota","modelo":"Solara","idModelo":"Toyota-Solara","slug":"solara","locales":["es","en","pt"],"typeByCountry":{"*":{"type":"model"}},"labels":["model:ok","model:variation","model:multiple-gens"],"notes":[{"content":"[New global model?] [NO] The Solara was developed as a coupe and convertible derivative of the Toyota Camry rather than as a primary standalone global model.\n[Rebadged model?] [NO] The Solara featured unique sheet metal and body styling rather than being a simple badge-engineered version of another model.\n[Bodystyle variation?] [YES] The model was marketed as the coupe and convertible bodystyle variation of the Toyota Camry mid-size sedan.\n[Multiple generations?] [YES] The Toyota Solara was produced in two distinct generations based on the XV20 and XV30 Camry platforms respectively.\n[Other names?] [NO] The model was sold primarily in North America and was not rebadged under other brands or nameplates in other markets.","userId":"llm-bot","createdAt":"2026-02-05T20:36:11.434Z"}],"modeloUrlSafe":"solara","marcaUrlSafe":"toyota","denunciasCount":12};
+
+</script><script type="text/javascript" src="https://static.startmycar.com/javascripts/generated/ugly-tracking.js?v=7aed8f"></script><script type="text/javascript">Aleph.UserInfo.trackUserInfoAndTimeOnPage();
+</script><title>2005 Toyota Solara owner's manual - StartMyCar</title><script type="text/javascript" crossorigin="anonymous" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript">// JQuery is so important that check it has loaded and retry from other source if not
+if (typeof jQuery == 'undefined') {
+  var errorMsg = "JQuery did not load from google. Trying from local server";
+  console.log(errorMsg);
+  setTimeout(function(){throw new Error(errorMsg)},0);
+
+  // Try to load from local server
+  document.write(unescape("%3Cscript src='/javascripts/lib/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+
+</script><script type="text/javascript">var clientMessages = {
+  success: "Success!",
+  thereWasAProblem: "There has been a problem",
+  thereWasAProblemWith: "There has been a problem with the ",
+  checkAllFields: "Check that all fields have been filled out",
+  checkYourCnx: "Is your internet working?"
+};
+
+var clientValidationMsgs = {
+  "passwordTooShort": "The password has to be at least 7 letters long",
+  "carYear": "You have to pick a model year",
+  "passwordDontMatch": "Passwords don't match",
+  "carKms": "You have to enter the number of miles your vehicle has, even if it is just approximate",
+  "carKmsOnlyDigits": "The number of miles should be round, without decimals, dots or blank spaces",
+  "usernameTooShort": "You have to pick a username with at least 4 letters",
+  "usernameTooLong": "The username cannot be longer than 35 characters!",
+  "userEmail": "Check that the email is spelled correctly",
+  "imageUploadInProgress": "Image upload is still in progress, resubmit when finished",
+  "imageUploadFileType": "The selected image format is not compatible with the site",
+  "imageUploadFileTooLarge": "The image is too big (more than 15MB). Shrink it first",
+  "imageUploadFailed": "There was a problem with the upload. Check your connection",
+  "imageUploadTooManyFiles": "The maximum number of images allowed is 10"
+};
+
+var clientUIStrings = {
+  "sameProblemCounterSingular": "one more person with the same problem",
+  "sameProblemCounterPlural": "and <strong class='n'>%s</strong> others with the same problem"
+};
+
+var clientImageUploadPolicy = {
+  "title": "<h3>Image usage</h3>",
+  "yesExplanation": "<strong>Do</strong> use images of the problem or solution to help others",
+  "noExplanation": "<strong>Don't</strong> add profile images or images of your car unrelated to the discussion",
+  "yesImage": "https://static.startmycar.com/images/image-upload-policy-yes.jpg?v=84ba77",
+  "noImage": "https://static.startmycar.com/images/image-upload-policy-not.jpg?v=d00063"
+};
+
+var clientReportDenuncia = {
+  "urlWarningImg": "https://static.startmycar.com/images/icons/caution.png?v=74b951",
+  "reportComment": "Report comment",
+  "reportProblem": "Report comment",
+}
+
+var urlAllMakesImage = "https://static.startmycar.com/images/makes-medium-all-tiny.png?v=799dd8";
+var allMakesImageMapping = ["abarth","acura","alfa-romeo","aro","audi","austin","baic","bmw","buick","byd","cadillac","changan","chery","chevrolet","chrysler","citroen","cupra","dacia","daewoo","daihatsu","datsun","dodge","dongfeng","ds","faw","ferrari","fiat","ford","foton","galloper","geely","genesis","gmc","great-wall","haval","honda","hummer","hyundai","ika","infiniti","isuzu","iveco","jac","jaguar","jeep","kia","lada","lancia","land-rover","lexus","lifan","lincoln","lotus","mahindra","maserati","mazda","mercedes-benz","mercury","mini","mitsubishi","nissan","oldsmobile","oltcit","opel","peugeot","plymouth","pontiac","porsche","proton","ram","renault","rover","renault-samsung","saab","santana","saturn","scion","seat","skoda","smart","ssangyong","subaru","suzuki","swm","tata","tesla","toyota","volkswagen","volvo","dfsk","bentley","shineray","aston-martin","holden","hsv","mg","triumph","vauxhall",""];
+
+var basePath = "";
+var clientUrls = {
+  armarPath:function (array, open) {
+    return basePath+"/" + array.join("/") + (open === false ? "/" : "");
+  },
+  urlDefectos: function(modelo, pageNumber) {
+    var parts = [modelo.marcaUrlSafe, modelo.modeloUrlSafe, "problems"];
+    if (pageNumber && pageNumber > 1) {
+      parts.push("page" + pageNumber);
+    }
+    return this.armarPath(parts);
+  },
+  urlResumen: function(modelo) {
+    return this.armarPath([modelo.marcaUrlSafe, modelo.modeloUrlSafe])
+  },
+  urlDefectosAgregar: function(modelo) {
+    return this.armarPath([modelo.marcaUrlSafe, modelo.modeloUrlSafe, "problems", "add"])
+  },
+  urlComparacion: function (modelo, modelo2){
+    if(modelo2) {return this.armarPath([modelo.marcaUrlSafe, modelo.modeloUrlSafe, "compare",modelo2.marcaUrlSafe, modelo2.modeloUrlSafe]);}
+    else{ return this.armarPath([modelo.marcaUrlSafe, modelo.modeloUrlSafe, "compare"]); }
+  },
+  urlDenuncia:function (modelo, reportId, tituloUrlSafe) {
+    return this.armarPath([modelo.marcaUrlSafe, modelo.modeloUrlSafe, "problems", reportId, tituloUrlSafe]);
+  },
+  urlPostUpdateUser:function () {
+    return this.armarPath(["user", "update"])
+  },
+  urlMemberProfile: function(userId) {
+    return this.armarPath(["members", "profile", userId]);
+  },
+  urlPostUpdateUserConfig:function () {
+    return this.armarPath(["user", "config-update"])
+  },
+  urlModalAddReview:function (model) {
+    return this.armarPath(["formaddreview", model.marcaUrlSafe, model.modeloUrlSafe])
+  },
+  marcaUrlSafeFromMarca: function(marca) {
+    return marca.toLowerCase().replace(" ", "-").replace("ë", "e");
+  },
+
+  sanitizarCaracteresEspeciales: function(s) {
+    r = s;
+    if (r) {
+      var r = r.toLowerCase();
+      r = r.replace(new RegExp("[àáâãäå]", 'g'), "a");
+      r = r.replace(new RegExp("æ", 'g'), "ae");
+      r = r.replace(new RegExp("ç", 'g'), "c");
+      r = r.replace(new RegExp("[èéêë]", 'g'), "e");
+      r = r.replace(new RegExp("[ìíîï]", 'g'), "i");
+      r = r.replace(new RegExp("ñ", 'g'), "n");
+      r = r.replace(new RegExp("[òóôõö]", 'g'), "o");
+      r = r.replace(new RegExp("œ", 'g'), "oe");
+      r = r.replace(new RegExp("[ùúûü]", 'g'), "u");
+      r = r.replace(new RegExp("[ýÿ]", 'g'), "y");
+      r = r.replace(new RegExp("[^\\w-\\s]", 'g'), ""); // All not word characters except -
+      r = r.trim().replace(new RegExp("\\s", 'g'), "-");
+      r = r.replace(new RegExp("--", 'g'), "-");
+    }
+    return r;
+  },
+  getImagesBaseUrl: function() {
+    return "https://startmycar-images.s3.amazonaws.com"
+  },
+  getPdfsBaseUrl: function() {
+    return "https://startmycar-manuals.s3.amazonaws.com"
+  }
+};</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-4013912341093266",
+enable_page_level_ads: true,
+overlays: { bottom: true } // This prevents anchor ads in the top of the screen, breaking the menu
+});</script><script type="text/javascript" crossorigin="anonymous" src="https://static.startmycar.com/javascripts/generated/ugly.js?v=c9f6e4"></script><script type="text/javascript">if(window.location.hash && window.location.hash.match(/^#!/)){
+    Aleph.ClientTracker.trackUserEvent({type: "migrationredirect"});
+    window.location = urlMigration.getRedirectUrl(window.location.hash, urlCreator);
+}
+
+handleAjaxPageLoad(/.*/i, /.*/i, getFadeTransitionHandler("#pagecontent", "#pagecontent"));
+
+var startLoadTime = pageLoadStartTime || new Date().getTime();
+$(window).load(function () {
+  Aleph.ClientTracker.trackUserEvent({type:"performance", metric:"pageLoadTime", value:(new Date().getTime() - startLoadTime)});
+});
+$(window).ready(function() {
+  Aleph.ClientTracker.trackUserEvent({type: "performance", metric: "pageDomLoadedTime", value: (new Date().getTime() - startLoadTime)});
+});
+window.onbeforeunload = function () {
+  Aleph.ClientTracker.trackUserEvent({type: "unload"});
+};
+window.addEventListener("pagehide", (event) => {
+  window.clearGlobalLoading && window.clearGlobalLoading();
+});
+
+</script><script type="text/javascript">(function() {
+    var abtestInfo = {"testComunidadFooter":"control","testAllSurveyOff":"control"};
+    var slots = {"testGlobalTrims":3,"testComunidadFooter":1,"testWizardAC":4};
+
+    function addABTestCustomVariables(gaq) {
+        if (abtestInfo) {
+            for (var prop in abtestInfo) {
+                if(slots[prop]) {
+                    gaq.push(['_setCustomVar', slots[prop], prop, abtestInfo[prop], 2]);
+                }
+            }
+        }
+    }
+
+    window.addABTestCustomVariables = addABTestCustomVariables;
+    window.abtestInfo = abtestInfo;
+})();
+</script><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', config.googleAnalyticsAccount]);
+_gaq.push(['_setSiteSpeedSampleRate', 30]);
+
+addABTestCustomVariables(_gaq);
+
+_gaq.push(['_setCustomVar', 2, 'userlevel', 'casual', 2]);
+
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NYESPTS621"></script><script type="text/javascript">(function(){
+    var customVariables = { userLevel: 'casual' };
+
+    if (window.abtestInfo) {
+        for (var prop in window.abtestInfo) {
+            var slot = window.addABTestCustomVariables[prop];
+            if (slot) {
+                var slotProperty = [null, 'abtest1', 'userLevel', 'abtest3', 'abtest4', 'abtest5'][slot];
+                customVariables[slotProperty] = prop + '=' + window.abtestInfo[prop];
+            }
+        }
+    }
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', "G-NYESPTS621", customVariables);
+
+    window.gtag = gtag;
+})();</script><link rel="stylesheet" href="https://static.startmycar.com/stylesheets/new/bundleSecondary.css?v=01b2bd"></head><body class="PageState--locale-en PageState--testComunidadFooter-control PageState--testAllSurveyOff-control"><div id="fb-root"></div><!--script(type='text/javascript', async).--><!--  (function(d, s, id) {--><!--    var js, fjs = d.getElementsByTagName(s)[0];--><!--    if (d.getElementById(id)) return;--><!--    js = d.createElement(s); js.id = id;--><!--    js.async=true;--><!--    js.src = "//connect.facebook.net/!{__('share.facebook.locale')}/sdk.js#xfbml=1&version=v2.5&appId=!{config.oauthFacebookClientId}";--><!--    fjs.parentNode.insertBefore(js, fjs);--><!--  }(document, 'script', 'facebook-jssdk'));--><script type="text/javascript">var beforeLoadCallsQueue = []
+
+function createMockGlobalsUntilLoaded(methods) {
+  _.each(methods, function(method) {
+    window[method] = function() {
+      globalLoading()
+
+      var msg = "Method "+method+" was called before loaded. Queuing until it has been loaded.";
+      Aleph.ClientTracker.trackUserEvent({type: 'warning', name: 'method-still-not-loaded', msg: msg});
+      console.warn(msg)
+
+      waitTimeout = setTimeout(function(){
+        Aleph.ClientTracker.trackUserEvent({type: 'warning', name: 'method-still-not-loaded-timeout', msg: "Method "+method+" was called before loaded 15 seconds ago. Timeout."});
+        endGlobalLoading()
+      }, 15000)
+
+      beforeLoadCallsQueue.push({method: method, timeout: waitTimeout})
+    }
+  })
+}
+
+function runQueuedOperationsOfMethod(method) {
+  beforeLoadCallsQueue = _.filter(beforeLoadCallsQueue, function(operation) {
+    if (operation.method === method) {
+      console.warn("Calling deferred method "+method);
+      clearTimeout(operation.timeout);
+      window[method]();
+      endGlobalLoading();
+      return false
+    }
+    return true
+  })
+}
+
+createMockGlobalsUntilLoaded(["openFilters", "openMenu", "openFixedMenu", "openSearchScreen"])
+</script><div class="loader-hidden" id="loader-wrapper"><div id="loader"></div></div><div><div class="HtmlBasePage" id="pagecontent"><div class="LayoutTopBar"><nav><div class="LayoutTopBar__content LeftRightBox"><div class="LeftRightBox__left"><a class="LinkButton LinkButton--white LinkButton--hover-enlarge" href="javascript:openMenu()" data-track-click="topbar,click-menu"><div class="IconHamburguer"></div></a>&nbsp;<a class="LinkButton LinkButton--white ml-0" href="/"><img class="LayoutTopBar__logo" src="https://static.startmycar.com/images/design2/startmycar-logo-white-header.png?v=6f46e2"></a><a href="javascript:loadSwitchCountryForm()"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/global.png?v=9b0c7a" title="International" alt="International"></a></div><div class="LeftRightBox__center only-desktop"><a class="LinkButton LinkButton--white FakeSearchBox no-decoration" href="javascript:openSearchScreen()" data-track-click="topbar,click-search"><span class="hover-enlarge IconSearch"></span><span class="align-middle text-normal-large semi-transparent"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Search your problem</span></a></div><div class="LeftRightBox__right"><span><span class="MarginChilds"><a class="only-desktop js-btn-login-register Button Button--transparent-blue" href="javascript:mostrarLogin()">Log in</a><a class="js-btn-signup Button Button--primary-dark" href="/signup?fromPath=%2Ftoyota%2Fsolara%2Finfo%2Fmanuals%2F2005" rel="nofollow">Sign up</a><a class="LinkButton LinkButton--white no-decoration only-mobile" href="javascript:openSearchScreen()" data-track-click="topbar,click-search"><span class="hover-enlarge IconSearch"></span></a></span></span></div></div></nav></div><div class="LayoutContent"><script type="text/javascript">currentModelo = {"marca":"Toyota","modelo":"Solara","idModelo":"Toyota-Solara","slug":"solara","locales":["es","en","pt"],"typeByCountry":{"*":{"type":"model"}},"labels":["model:ok","model:variation","model:multiple-gens"],"notes":[{"content":"[New global model?] [NO] The Solara was developed as a coupe and convertible derivative of the Toyota Camry rather than as a primary standalone global model.\n[Rebadged model?] [NO] The Solara featured unique sheet metal and body styling rather than being a simple badge-engineered version of another model.\n[Bodystyle variation?] [YES] The model was marketed as the coupe and convertible bodystyle variation of the Toyota Camry mid-size sedan.\n[Multiple generations?] [YES] The Toyota Solara was produced in two distinct generations based on the XV20 and XV30 Camry platforms respectively.\n[Other names?] [NO] The model was sold primarily in North America and was not rebadged under other brands or nameplates in other markets.","userId":"llm-bot","createdAt":"2026-02-05T20:36:11.434Z"}],"modeloUrlSafe":"solara","marcaUrlSafe":"toyota","denunciasCount":12};
+</script><nav><div class="FooterBar only-mobile only-portrait"><div class="FooterBar__background"></div><div class="FooterBar__content FlexCentered FlexCentered--evenly"><a class="item resumen text-center FooterMenuItem" href="/toyota/solara" data-track-click="footerMenu,click-item,resumen"><img class="Icon Icon--small FooterMenuItem__img" src="https://static.startmycar.com/images/design2/icons/icon_info.svg?v=0f5883"/><div class="FooterMenuItem__text">Info</div></a><a class="item defectos text-center FooterMenuItem" href="/toyota/solara/problems" data-track-click="footerMenu,click-item,defectos"><img class="Icon Icon--small FooterMenuItem__img" src="https://static.startmycar.com/images/design2/icons/icon_wrench.svg?v=ccdcb2"/><div class="FooterMenuItem__text">Problems</div></a><a class="item reviews text-center FooterMenuItem" href="/toyota/solara/reviews" data-track-click="footerMenu,click-item,reviews"><img class="Icon Icon--small FooterMenuItem__img" src="https://static.startmycar.com/images/design2/icons/icon_star-half.svg?v=462300"/><div class="FooterMenuItem__text">Reviews</div></a><a class="item search text-center FooterMenuItem" href="javascript:openSearchScreen();" data-track-click="footerMenu,click-item,search"><img class="Icon Icon--small FooterMenuItem__img" src="https://static.startmycar.com/images/design2/icons/icon_search.svg?v=f7cc1f"/><div class="FooterMenuItem__text">Search</div></a></div></div></nav><nav><div class="HeaderBar"><div class="HeaderBar__background"></div><div class="HeaderBar__content LeftRightBox"><div class="LeftRightBox__left text-ellipsis"><div itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList"><a href="/toyota/pickmodel"><span class="MakeLogo MakeLogo--small"><img class="MakeLogo__img" src="https://static.startmycar.com/images/logos-transparent/toyota.png?v=04e71d" alt="toyota" title="toyota"/></span></a>&nbsp;
+&nbsp;<span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="HeaderBar__item" itemprop="item" href="/toyota/solara"><span itemprop="name">Solara</span></a><meta itemprop="position" content="1"/></span><span class="HeaderBar__separator IconArrowSeparator"></span><span itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="HeaderBar__item" itemprop="item" href="/toyota/solara/info/manuals"><span itemprop="name">Manuals</span></a><meta itemprop="position" content="2"/></span><span class="HeaderBar__separator IconArrowSeparator"></span><span class="HeaderBar__item">2005</span></div></div></div></div><div class="HeaderBar__pusher"></div></nav><!-- Hack to hide password notice in micuenta--><div class="owners-manual"><h1 class="TitleGray">2005 <span class='marca'>Toyota</span>&nbsp;<span class='modelo'>Solara</span> owner's manuals</h1><div class="manuals margin-medium text-center max-width-700"><!--p!= __('views.infoOwnersManual.findBelowExplanation', {make: modelo.marca, model: modelo.modelo, minYear: _.min(_.pluck(manuals, 'year')), maxYear: _.max(_.pluck(manuals, 'year'))})--><div><div class="adunit-leader margin-ads" style="text-align:center;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Responsive leader ad--><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4013912341093266" data-ad-slot="2304238036" data-full-width-responsive="true" data-ad-format="auto"><script>(adsbygoogle = window.adsbygoogle || []).push({});
+</script></ins></div><div class="manuals-box margin-top max-width-700 p-1"><div class="manuals-box__titlebar text-small color-text-gray"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/us.png?v=f4e744" title="United States" alt="United States"><span> United States edition</span><div class="Subtitle">Toyota Solara <strong>2005</strong> Owner's Manual</div></div><div class="m-1 mt-2"><div class="DocPagesPreview DocPagesPreview--reverse"><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-262.jpg" alt="manual Toyota-Solara 2005 pag262" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-218.jpg" alt="manual Toyota-Solara 2005 pag218" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-175.jpg" alt="manual Toyota-Solara 2005 pag175" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-131.jpg" alt="manual Toyota-Solara 2005 pag131" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-088.jpg" alt="manual Toyota-Solara 2005 pag088" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-044.jpg" alt="manual Toyota-Solara 2005 pag044" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div><div class="DocPagesPreview__page"><img class="ManualCoverThumb" src="https://manuals.startmycar.com/processed/v1/92fd2c757bd270582a5aa5f9e03307cc/thumbnails/page-001.jpg" alt="manual Toyota-Solara 2005 pag001" onerror="this.onerror=null;this.src='https://static.startmycar.com/images/generated/manual_page_thumb_stub-2X.png?v=f2bb51';"/></div></div></div><div class="manual-text color-text-gray"><div><span class="TagLink TagLink--gray mr-1">6.6 MB</span><span class="TagLink TagLink--gray mr-1">348 pages</span><span class="TagLink TagLink--gray">&nbsp;<!--img(src=cdn("/images/banderas/" + (langIsoCodeToCountry[baseLang] || baseLang) + ".png"), title=language, alt=language).banderaPais--><span>english</span></span></div><a class="Button Button--primary mt-2 js-manual" href="https://manuals.startmycar.com/published/Toyota-Solara_2005_EN-US_US_92fd2c757b.pdf" target="_blank" data-hash="92fd2c757bd270582a5aa5f9e03307cc"><img class="Icon" src="https://static.startmycar.com/images/icons/pdf-format.png?v=d930a4"> Download manual PDF</a></div></div><div class="p-1"></div></div><br><br><div class="text-center">Looking for another year or model?&nbsp;<a class="js-btn-manual-feedback" href="javascript:void(0);">Let us know!</a></div><br><div class="text-center">Do you have any PDF manual to share?&nbsp;</div><a class="margin Button Button--primary" href="/toyota/solara/info/manuals/upload">Upload it and share it</a><br><script type="text/javascript">$(".js-manual").click(function(){
+  var clickedManual = $(".Subtitle", $(this).parent().parent()).text();
+
+  trackGAEvent('useractions', 'info-manuals-download-click', clickedManual);
+  Aleph.ClientTracker.trackUserEvent({
+    type: "click",
+    namespace:"info-manuals",
+    event:"download-click",
+    label: {manual: clickedManual, hash: $(this).data('hash')}
+  });
+  return true;
+});
+
+$(".js-btn-manual-feedback").click(function() {
+  loadFeedbackModal('manualRequest')
+});</script></div></div><br><br></div><nav><div class="Menu"><div class="Menu__darkness hidden"></div><div class="Menu__menu"><div class="Menu__header"><div class="Menu__user FlexCentered FlexCentered--space-around"><a class="js-btn-login-register Button Button--transparent-blue" href="javascript:mostrarLogin()">Log in</a><a class="js-btn-signup Button Button--primary-dark" href="/signup">Sign up</a></div><div class="Menu__context"><div class="LeftRightBox"><div class="LeftRightBox__left FlexCentered"><a href="/toyota/pickmodel"><span class="MakeLogo MakeLogo--small"><img class="MakeLogo__img" src="https://static.startmycar.com/images/logos-transparent/toyota.png?v=04e71d" alt="toyota" title="toyota"/></span></a><span class="MenuMakeName">Solara</span></div><div class="LeftRightBox__rightmostrar"><a class="Button Button--transparent-blue Button--small" href="/pickmake"><span class="Button__text">Other</span><img src="https://static.startmycar.com/images/design2/icons/icon_sync--blue.svg?v=b837ba"></a></div></div></div></div><div class="Menu__items"><a class="item resumen Menu__item" href="/toyota/solara" data-track-click="mainMenu,click-item,resumen"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_info.svg?v=0f5883"/><span class="Menu__item__text">Useful information</span></a><a class="item community Menu__item" href="/toyota/solara/community" data-track-click="mainMenu,click-item,community"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_community.svg?v=022093"/><span class="Menu__item__text">Community</span></a><a class="item defectos Menu__item" href="/toyota/solara/problems" data-track-click="mainMenu,click-item,defectos"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_wrench.svg?v=ccdcb2"/><span class="Menu__item__text">Problems and issues</span></a><a class="item guides Menu__item" href="/toyota/solara/guides" data-track-click="mainMenu,click-item,guides"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_guides.svg?v=d8703b"/><span class="Menu__item__text">Useful guides</span></a><a class="item reviews Menu__item" href="/toyota/solara/reviews" data-track-click="mainMenu,click-item,reviews"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_star-half.svg?v=462300"/><span class="Menu__item__text">Owner's reviews</span></a><a class="item comparar Menu__item" href="/toyota/solara/compare" data-track-click="mainMenu,click-item,comparar"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_compare.svg?v=5f0a7a"/><span class="Menu__item__text">Comparisons</span></a><a class="item search Menu__item" href="javascript:openSearchScreen();" data-track-click="mainMenu,click-item,search"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_search.svg?v=f7cc1f"/><span class="Menu__item__text">Search</span></a><a class="item help Menu__item" href="/help" data-track-click="mainMenu,click-item,help"><img class="Menu__item__img" src="https://static.startmycar.com/images/design2/icons/icon_help.svg?v=2cca22"/><span class="Menu__item__text">Help</span></a><!--div.Menu__item.text-center#menu-fb-share.fb-like(data-href=__('share.facebook.pageURL'), data-layout="button_count", data-action="like", data-show-faces="false", data-share="false")
+--></div></div></div><script type="text/javascript">(function initializeMenu() {
+  console.log("Loaded menu", new Date().getTime() - startLoadTime, "ms")
+  var menuHideTimeout = 0;
+  var menuIsOpened = false;
+
+  window.openMenu = function openMenu()
+  {
+    if(!menuIsOpened) {
+      menuIsOpened = true;
+      clearTimeout(menuHideTimeout);
+      $(".Menu .Menu__darkness").toggleClass("hidden", false)
+      setTimeout(function() {
+        $(".Menu").toggleClass("Menu--opened", true)
+      }, 2);
+
+      historyOpenDialog("menu");
+
+      Aleph.ClientTracker.trackUserEvent({
+        type: "modal",
+        "namespace": "modalpage",
+        "event": "modal-shown",
+        "label": "mainMenu"
+      });
+
+      trackGAEvent("modalpage", "modal-shown", "mainMenu", null, true);
+
+      // if (window.loadFBLikeBtn) {
+      //   window.loadFBLikeBtn();
+      // }
+    }
+  }
+
+  window.openFixedMenu = function openFixedMenu(){
+    menuIsOpened = true;
+    $(".Menu .Menu__darkness").toggleClass("hidden", false)
+    $(".Menu").toggleClass("Menu--opened", true)
+  }
+
+  window.closeMenu = function closeMenu() {
+    if(menuIsOpened) {
+      menuIsOpened = false;
+      $(".Menu").toggleClass("Menu--opened", false);
+
+      menuHideTimeout = setTimeout(function() {
+        $(".Menu .Menu__darkness").toggleClass("hidden", true)
+      }, 500);
+
+      historyCloseDialog("menu");
+
+      Aleph.ClientTracker.trackUserEvent({
+        type: "modal",
+        "namespace": "modalpage",
+        "event": "modal-hidden",
+        "label": "mainMenu"
+      });
+    }
+  }
+
+  window.loadSwitchCountryForm = function () {
+    loadModalPage("/formswitchcountry");
+  }
+
+  historyOnBackButton("menu", window.closeMenu)
+
+  $(".Menu__darkness").click(window.closeMenu)
+
+  runQueuedOperationsOfMethod("openMenu")
+  runQueuedOperationsOfMethod("openFixedMenu")
+})()
+</script></nav><div class="SearchScreen SearchScreen--closed js-searchscreen"><div class="SearchScreen__darkness"></div><div class="SearchScreen__screen"><div class="SearchScreen__bar FlexCentered FlexCentered--left FlexCentered--nowrap"><a class="LinkButton LinkButton--hover-enlarge" href="javascript:closeSearchScreen()"><img class="Icon Icon--left" src="https://static.startmycar.com/images/design2/icons/icon_arrowback.svg?v=2d7340"></a><input class="MaterialInput MaterialInput--searchscreen" id="searchbox" type="text" maxlength="1000" placeholder="Search problem..."><a class="LinkButton LinkButton--hover-enlarge" href="javascript:siteSearch()"><img class="Icon Icon--left" src="https://static.startmycar.com/images/design2/icons/icon_search--blue.svg?v=2e95b4"></a></div><div><div class="TitleGray">Popular searches</div><a class="LinkBlock" href="javascript:siteSearch(&quot;Radio&quot;)" data-track-click="search,click-popular,Radio"><img class="Icon Icon--left" src="https://static.startmycar.com/images/design2/icons/icon_trending--gray.svg?v=5245f1"><span class="align-middle">Radio</span></a><a class="LinkBlock" href="javascript:siteSearch(&quot;Clutch&quot;)" data-track-click="search,click-popular,Clutch"><img class="Icon Icon--left" src="https://static.startmycar.com/images/design2/icons/icon_trending--gray.svg?v=5245f1"><span class="align-middle">Clutch</span></a><a class="LinkBlock" href="javascript:siteSearch(&quot;Overheating&quot;)" data-track-click="search,click-popular,Overheating"><img class="Icon Icon--left" src="https://static.startmycar.com/images/design2/icons/icon_trending--gray.svg?v=5245f1"><span class="align-middle">Overheating</span></a><a class="LinkBlock" href="javascript:siteSearch(&quot;Fusebox&quot;)" data-track-click="search,click-popular,Fusebox"><img class="Icon Icon--left" src="https://static.startmycar.com/images/design2/icons/icon_trending--gray.svg?v=5245f1"><span class="align-middle">Fusebox</span></a></div></div></div><script type="text/javascript">(function initializeSeach() {
+  console.log("Loaded search screen code ", new Date().getTime() - startLoadTime, "ms")
+  var $searchScreen = $(".SearchScreen");var searchIsOpen = false;
+
+  window.openSearchScreen = function openSearchScreen(popstateTriggered) {
+    if(!searchIsOpen) {
+      $searchScreen.toggleClass('SearchScreen--closed', false);
+      searchIsOpen = true;
+      $("#searchbox", $searchScreen).focus();
+
+      historyOpenDialog("search");
+
+      Aleph.ClientTracker.trackUserEvent({
+        type: "modal",
+        "namespace": "modalpage",
+        "event": "modal-shown",
+        "label": "searchScreen"
+      });
+      trackGAEvent("modalpage", "modal-shown", "searchScreen", null, true);
+    }
+  }
+
+  window.closeSearchScreen = function closeSearchScreen(popstateTriggered) {
+    if(searchIsOpen) {
+      $searchScreen.toggleClass('SearchScreen--closed', true)
+      searchIsOpen = false;
+
+      Aleph.ClientTracker.trackUserEvent({
+        type: "modal",
+        "namespace": "modalpage",
+        "event": "modal-hidden",
+        "label": "searchScreen"
+      });
+
+      historyCloseDialog("search")
+    }
+  }
+
+  // Needed for triggering close on back button in mobile
+  historyOnBackButton("search", closeSearchScreen)
+
+  window.siteSearch = function siteSearch(query) {
+    if(!query) {
+      query = $("input#searchbox").val();
+      query = (query || "").trim();
+    }
+
+    if (query) {
+      if (window.pageModelo) {
+        makeAjaxPost('/utils/smart-search', {query: query, idModelo: pageModelo.idModelo});
+      } else {
+        makeAjaxPost('/utils/smart-search', {query: query});
+      }
+
+      trackGAEvent('useractions', 'search', query);
+    } else {
+      trackGAEvent('useractions', 'empty-search', query);
+    }
+  }
+
+  $(".SearchScreen__darkness", $searchScreen).click(closeSearchScreen)
+
+  $("#searchbox", $searchScreen).keyup(function(e) {
+    if (e.which == 13) {
+      siteSearch();
+    } else if (e.which == 27) {
+      closeSearchScreen();
+    }
+  });
+
+  runQueuedOperationsOfMethod("openSearchScreen")
+})()</script><script type="text/javascript">$(document).on("click", ".GlossaryRef[data-glossary-semantic]", function dataTrackClickHandler(e) {
+  var semantic = $(this).data("glossary-semantic");
+  var searchedtext = $(this).text();
+
+  if (semantic && searchedtext) {
+    loadModalPage("/modalglossary?semantic=" + encodeURIComponent(semantic) + "&searchedText=" + encodeURIComponent(searchedtext))
+  }
+
+  Aleph.ClientTracker.trackUserEvent({
+    type: "click",
+    namespace: "glossary",
+    event: "tap-word",
+    label: searchedtext
+  });
+});</script></div><div class="survey SmileySurvey offscreen notdisplayed screen-bottom-right" id="floating-survey"><div class="question"><p><strong>Did you find the website helpful?</strong></p></div><div class="thanks-msg"><p><strong>Thank you!</strong><br><br></p></div><div class="options"><span class="smiley smiley-sad" data-track-click="survey-2,click-smiley,sad"><div class="btn btn-mini btn-link">No!</div></span><span class="smiley smiley-neutral" data-track-click="survey-2,click-smiley,neutral"><div class="btn btn-mini btn-link">Meh...</div></span><span class="smiley smiley-happy" data-track-click="survey-2,click-smiley,happy"><div class="btn btn-mini btn-link">Yes!</div></span></div></div><script type="text/javascript">$(document).ready(function () {
+  var $survey = $("#floating-survey");
+  var SURVEY_MARK = "survey-2-replied";
+  var SURVEY_SHOWN_MARK = "survey-2-shown";
+
+  var timeForSurvey = userHasMark(SURVEY_SHOWN_MARK) ? 2000 : 60000;
+
+  setTimeout(function() {
+    // Future surveys will start right away
+    setUserMark(SURVEY_SHOWN_MARK);
+
+    if (!userHasMark(SURVEY_MARK)) {
+      $survey.toggleClass("notdisplayed", false);
+      setTimeout(function(){
+        $survey.toggleClass("offscreen", false);
+        Aleph.ClientTracker.trackUserEvent({
+          type: "modal",
+          "namespace": "survey-2",
+          "event": "modal-shown",
+          "label": "smileys"
+        });
+      }, 5);
+    }
+  }, timeForSurvey);
+
+  $(".options .smiley", $survey).click(function(e) {
+    $survey.toggleClass("replied", true);
+
+    setTimeout(function() {
+      $survey.toggleClass("offscreen", true);
+      setTimeout(function(){
+        $survey.toggleClass("notdisplayed", true);
+      }, 1000)
+    }, 750);
+
+    loadModalPage("/formsurvey", function(err, $modal) {
+      // Include survey choice in form data, useful to complement feedback
+      var surveySelection = "?";
+      var classes = e.currentTarget.classList;
+      for(var i=0;i<classes.length;i++){
+        if(classes[i].match("^smiley-")){
+          surveySelection = classes[i].split('-')[1];
+          break;
+        }
+      }
+      $("#surveySelection", $modal).val(surveySelection);
+    });
+
+    setUserMark(SURVEY_MARK);
+    return true;
+  });
+});</script></div><div id="react-modals"></div><div class="Footer"><div class="DesktopViewPort"><div class="text-center margin-top-small"><div class="FooterText margin-bottom">Browse site version for:</div><div>&nbsp;<form class="inline-block" action="/au/toyota/solara/info/manuals/2005?setSessionCountry=1" method="post"><a class="margin-small" href="javacript:void(0)" onclick="this.closest('form').submit();return false;"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/au.png?v=909f70" title="Australia" alt="Australia"/></a></form><form class="inline-block" action="/ca/toyota/solara/info/manuals/2005?setSessionCountry=1" method="post"><a class="margin-small" href="javacript:void(0)" onclick="this.closest('form').submit();return false;"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/ca.png?v=b62b5d" title="Canada" alt="Canada"/></a></form><form class="inline-block" action="/gb/toyota/solara/info/manuals/2005?setSessionCountry=1" method="post"><a class="margin-small" href="javacript:void(0)" onclick="this.closest('form').submit();return false;"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/gb.png?v=5afd0a" title="Great Britain" alt="Great Britain"/></a></form><form class="inline-block" action="/nz/toyota/solara/info/manuals/2005?setSessionCountry=1" method="post"><a class="margin-small" href="javacript:void(0)" onclick="this.closest('form').submit();return false;"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/nz.png?v=6a47ef" title="New Zealand" alt="New Zealand"/></a></form><form class="inline-block" action="/us/toyota/solara/info/manuals/2005?setSessionCountry=1" method="post"><a class="margin-small" href="javacript:void(0)" onclick="this.closest('form').submit();return false;"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/us.png?v=f4e744" title="United States" alt="United States"/></a></form><form class="inline-block" action="/za/toyota/solara/info/manuals/2005?setSessionCountry=1" method="post"><a class="margin-small" href="javacript:void(0)" onclick="this.closest('form').submit();return false;"><img class="banderaPais" src="https://static.startmycar.com/images/banderas/za.png?v=239c94" title="South Africa" alt="South Africa"/></a></form></div><div class="LineGray margin-top"></div></div><div class="text-center my-1"><a class="LinkButton LinkButton--gray" href="https://www.opinautos.com"><img class="LinkButton__icon" src="https://static.startmycar.com/images/banderas/es.png?v=fc29fb"/><span>Español</span></a><a class="LinkButton LinkButton--gray" href="https://www.opinautos.com.br"><img class="LinkButton__icon" src="https://static.startmycar.com/images/banderas/br.png?v=7a0381"/><span>Português</span></a><div class="LineGray margin-top"></div></div><div class="LeftRightBox"><div class="LeftRightBox__left margin"><div class="FooterText">©2026 Rewise&nbsp;Inc.</div></div><div class="LeftRightBox__right margin"><!--a(href="javascript:void(0)").LinkButton.LinkButton--gray!= __('home.linkTermsAndConditions')--><!--a(href="javascript:void(0)").LinkButton.LinkButton--gray!= __('home.linkPrivacyPolicy')--><a class="LinkButton LinkButton--gray" href="/help">Help</a><a class="LinkButton LinkButton--gray" href="/privacy-policy">Privacy</a><a class="LinkButton LinkButton--gray" href="/terms-of-use">Terms</a><a class="LinkButton LinkButton--gray" href="javascript:loadModalPage('/feedbackform');">Feedback</a><a class="LinkButton LinkButton--gray" href="mailto:media@opinautos.com">Publish with us</a></div></div></div></div><script type="text/javascript">function mostrarError(errorHtml, errorTitle){
+  var $okButton = $("<div data-dismiss='modal' class='Button'>").text("Ok")
+  var $errorDialog = $("<div class='MsgDialog MsgDialog--error'>");
+  $errorDialog.append($("<div class='MsgDialog__title'>").text(errorTitle || clientMessages.thereWasAProblem));
+  $errorDialog.append($("<div class='MsgDialog__msg max-width-400'>").html(errorHtml));
+  $errorDialog.append($("<div class='MsgDialog__buttons'>").append($okButton));
+
+  opidialog.openFromDom("mostrarError", $errorDialog)
+}
+
+function mostrarMensaje(html, title) {
+  var $msgDialog = $("<div class='MsgDialog'>");
+  if(title) {
+    $msgDialog.append($("<div class='MsgDialog__title'>").text(title));
+  }
+  $msgDialog.append($("<div class='MsgDialog__msg'>").html(html));
+  var $okButton = $("<div data-dismiss='modal' class='Button'>").text("Ok")
+  $msgDialog.append($("<div class='MsgDialog__buttons'>").append($okButton));
+
+  opidialog.openFromDom("mostrarMensaje", $msgDialog)
+}
+
+function validationProblemsMsg(){
+  mostrarError(clientMessages.checkAllFields, " ")
+}
+
+function mostrarLogin(optionalEmail, optionalFromPath) {
+  loadModalPage("/formloginregister", function(err, $modalHtml) {
+    if (optionalEmail) {
+      $('input[name=email]', $modalHtml).val(optionalEmail);
+      $('input[name=password]', $modalHtml).focus();
+    } else if (window.innerWidth >= 800 && window.innerHeight >= 600) {
+      // Only do this in desktop screens, as in mobile hides part of the modal
+      $('input[name=email]', $modalHtml).focus();
+    }
+
+    if(optionalFromPath) {
+      $('input[name=redirect]', $modalHtml).val(optionalFromPath);
+    }
+  });
+}
+
+function openDataFeedback(dataType) {
+  loadModalPage("/feedbackform", function (err, $modal) {
+    // Re-style the modal for fusebox feedback
+    $(".MsgDialog__title", $modal).text("Did you find any kind of error in the data?");
+    $("#contenido", $modal).attr("placeholder", "Tell us what we should fix or improve...");
+
+    // Hide email to make it less intrusive
+    $(".js-contact-info", $modal).hide();
+
+    // Set modal type so this kind of feedback can be differentiated from regular feedback
+    $("#feedbackContext", $modal).
+      val(JSON.stringify({ modalType: "dataFeedback", dataType: dataType }));
+
+    $("#contenido").focus();
+  });
+}
+</script><script type="text/javascript">var msgs = [];
+
+if (msgs.length > 0) {
+  mostrarMensaje(msgs[0].body, msgs[0].title || '')
+}
+</script><script type="text/javascript">function logout(){
+  makeAjaxGet("/logout", getDefaultGetHandler());
+}
+
+function fixOauthLoginButtonsHrefs(){
+  //-TODO: Esto no anda si hay un reload por ajax, ya que esta parte de la página no suele recargarse
+  //- y puede haber nuevo código con botones similares a este.
+
+  //- Set redirect URL if empty with current page (note the exact match of href)
+  var registerUrl = "/auth/register/facebook?redirecturl="+encodeURIComponent(document.location.pathname);
+  $('a.js-btn-fb-signup[href="/auth/register/facebook?redirecturl="]').attr("href", registerUrl);
+
+  var loginUrl = "/auth/login/facebook?redirecturl="+encodeURIComponent(document.location.pathname);
+  $('a.js-btn-fb-login[href="/auth/login/facebook?redirecturl="]').attr("href", loginUrl);
+
+  //- If the register button has a registration context, set the query param in the callback
+  var $registerBtn = $('a.js-btn-fb-signup[href*="/auth/register/facebook?redirecturl="]');
+  var registrationCtx = $registerBtn.data('registration-ctx')
+  if (registrationCtx) {
+    $registerBtn.attr('href', $registerBtn.attr('href') + '&registrationctx=' + encodeURIComponent(registrationCtx));
+  }
+}
+
+onDocumentReady(function($dom){
+  $(document).on('click', '.image-box', function(e){
+    if(!$(this).hasClass('uploading')) {
+      var imgId = $(this).data('image-url');
+      var imgPreviewUrl = $(this).data('image-preview-url');
+      // Set width and height so the popup has the right size
+      var w = $(this).data('image-width');
+      var h = $(this).data('image-height');
+
+      var $img = $("<img>", {src: imgPreviewUrl, "class": 'ImageFullScreen'});
+      var $original = $("<div>").append($("<a>", {text: "View original", target: "_blank", href: imgId, 'class': 'LinkButton'}));
+      /*var $placeholder = $("<div>", {position: 'relative', height: 0, 'padding-bottom': (h/w*100)+"%"});
+      $placeholder.append($("<div>", {
+        position: 'absolute',
+        height: h+'px',
+        width: w+'px',
+        background: "red",
+        top: 0,
+        left: 0,
+        'padding-bottom': (h/w*100)+'%'
+      }));
+
+
+      // Once the image is loaded, remove width and height attrs just in case they are wrong
+      $img.load(function() {
+        $placeholder.remove();
+      })
+      $dialog = $("<div>").append($placeholder).append($img)
+      */
+      opidialog.openFromDom("zoomImage-" + imgId, $("<div>", {style: 'text-align: center;'}).append($img).append($original));
+    }
+    e.preventDefault();
+  });
+
+  //- Track facebook logins/registrations
+  var loginClicked = false;
+  $(".js-btn-fb-login").on("click", function(){
+    if(loginClicked){
+      console.log("Blocked second click");
+      return false;
+    }
+    loginClicked = true;
+    setTimeout(function(){
+      loginClicked = false;
+    }, 5000);
+     trackGAEvent('useractions', 'login', 'click-facebook');
+  });
+
+  var registerClicked = false;
+  $(".js-btn-fb-signup").on("click", function(){
+    if(registerClicked){
+      console.log("Blocked second click");
+      return false;
+    }
+    registerClicked = true;
+    setTimeout(function(){
+      registerClicked = false;
+    }, 5000);
+    trackGAEvent('useractions', 'oauth', 'click-register-facebook');
+  });
+
+  fixOauthLoginButtonsHrefs();
+});</script></body></html>
